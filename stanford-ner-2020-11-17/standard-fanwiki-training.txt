@@ -101,8 +101,8 @@ Wielding	O
 the	O
 incredibly	O
 powerful	O
-Star	PERSON
-Platinum	PERSON
+Star	ORGANIZATION
+Platinum	ORGANIZATION
 ,	O
 Jotaro	PERSON
 is	O
@@ -162,8 +162,8 @@ by	O
 his	O
 Stand	O
 ,	O
-Star	PERSON
-Platinum	PERSON
+Star	ORGANIZATION
+Platinum	ORGANIZATION
 ,	O
 creating	O
 a	O
@@ -192,7 +192,7 @@ preparedness	O
 Provided	O
 by	O
 :	O
-Fandom	ORGANIZATION
+Fandom	O
 How	O
 does	O
 the	O
@@ -201,8 +201,8 @@ between	O
 Jotaro	PERSON
 Kujo	PERSON
 and	O
-Star	PERSON
-Platinum	PERSON
+Star	O
+Platinum	O
 evolve	O
 throughout	O
 the	O
@@ -217,8 +217,8 @@ with	O
 his	O
 Stand	O
 ,	O
-Star	PERSON
-Platinum	PERSON
+Star	ORGANIZATION
+Platinum	ORGANIZATION
 ,	O
 is	O
 characterized	O
@@ -229,8 +229,8 @@ and	O
 respect	O
 .	O
 
-Star	PERSON
-Platinum	PERSON
+Star	O
+Platinum	O
 ,	O
 renowned	O
 for	O
@@ -283,7 +283,7 @@ Higashikata	PERSON
 Provided	O
 by	O
 :	O
-Fandom	ORGANIZATION
+Fandom	O
 What	O
 are	O
 the	O
@@ -426,7 +426,7 @@ Platinum	ORGANIZATION
 ,	O
 ultimately	O
 defeating	O
-DIO	PERSON
+DIO	O
 .	O
 
 After	O
@@ -441,7 +441,7 @@ a	O
 blood	O
 transfusion	O
 from	O
-DIO	PERSON
+DIO	O
 's	O
 body	O
 .	O
@@ -449,7 +449,7 @@ body	O
 Provided	O
 by	O
 :	O
-Fandom	ORGANIZATION
+Fandom	O
 What	O
 are	O
 the	O
@@ -459,8 +459,8 @@ Jotaro	PERSON
 's	O
 Stand	O
 ,	O
-Star	PERSON
-Platinum	PERSON
+Star	ORGANIZATION
+Platinum	ORGANIZATION
 ?	O
 
 Jotaro	PERSON
@@ -468,8 +468,8 @@ Kujo	PERSON
 's	O
 Stand	O
 ,	O
-Star	PERSON
-Platinum	PERSON
+Star	ORGANIZATION
+Platinum	ORGANIZATION
 ,	O
 is	O
 a	O
@@ -535,8 +535,8 @@ potent	O
 Stands	O
 .	O
 
-Star	PERSON
-Platinum	PERSON
+Star	O
+Platinum	O
 can	O
 also	O
 stop	O
@@ -553,7 +553,7 @@ Jotaro	PERSON
 Provided	O
 by	O
 :	O
-Fandom	ORGANIZATION
+Fandom	O
 {	O
 "	O
 @context	O
