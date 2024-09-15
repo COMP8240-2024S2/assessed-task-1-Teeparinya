@@ -1,4 +1,4 @@
-trainFile = standard-wikipedia-training.txt
+trainFile = standard-wikipedia-training-corrected.txt
 serializeTo = ner-model.ser.gz
 map = word=0,answer=1
 

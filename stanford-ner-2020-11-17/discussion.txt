@@ -1,9 +1,15 @@
 Based on the evaluation of the NER model trained using the stanford-wikipedia-training.txt file and evaluated with wikipedia-gold.txt, 
-the precision, recall, and F1-score provide insights into the model's performance. 
-Precision measures the accuracy of the predicted entities, while recall assesses how well the model captures all relevant entities in the dataset. 
-The F1-score balances these two metrics. The results show that for LOCATION entities, the model achieved high precision (0.88) and recall (0.9167), resulting in a strong F1-score of 0.8980, indicating the model is quite effective at identifying locations. 
-However, the performance drops for ORGANIZATION entities, with a precision of 0.7353 and recall of 0.4854, leading to a lower F1-score of 0.5848, suggesting difficulties in consistently identifying organizations, 
-possibly due to more false negatives. In particular, the model failed to correctly identify certain entities like "WorldCat," "Scientology," "Rogers and Cowan" as ORGANIZATION, instead tagging them incorrectly or not tagging them at all. 
-This suggests that the pretrained NER model might not be sufficiently familiar with less common or specific organization names. 
-PERSON entities also showed a disparity, with high precision (0.9190) but lower recall (0.6558), resulting in an F1-score of 0.7654, 
-indicating the model accurately predicts persons when it does but misses a significant number of them. Overall, the model's total F1-score of 0.7419 reflects a reasonable balance.
+the precision, recall, and F1-score provide insights into the model's performance. Precision measures the accuracy of the predicted entities, 
+while recall assesses how well the model captures all relevant entities, with the F1-score balancing these two metrics. 
+The results show high precision (0.88) and recall (0.9167) for LOCATION entities, resulting in a strong F1-score of 0.8980, indicating effectiveness in identifying locations. 
+However, the model struggles with ORGANIZATION entities, achieving a precision of 0.7353 and recall of 0.4854, leading to a lower F1-score of 0.5848. 
+This could be due to misidentification of less common organizations such as "WorldCat," "Scientology," and "Rogers and Cowan." PERSON entities showed high precision (0.9190) but lower recall (0.6558), resulting in an F1-score of 0.7654. 
+I ran fix-ner.py to correct punctuation tagging errors, such as changing "(" from PERSON to "O." It was found that "standard-wikipedia.txt" from ./ner.sh had just 2 small points in the text file. 
+After re-running the training and testing, the results remained largely unchanged, suggesting that these punctuation errors had minimal impact on overall model performance.
+
+Using the standard-fanwiki-training.txt file and testing on fanwiki-gold.txt, the evaluation metrics provide insight into the NER model's performance on this specialized dataset from fandom. 
+The model performed well for LOCATION entities, achieving perfect precision and recall (1.0000). This is likely because only a few words, specifically "Egypt" and "Atlantic," were identified as locations in the text file.
+However, performance significantly dropped for ORGANIZATION entities, where the precision was 0.8571 but recall was notably low at 0.2500, resulting in an F1-score of 0.3871. 
+This suggests the model struggles with accurately identifying organizations, as evidenced by the high number of false negatives, possibly due to the model's unfamiliarity with specific organization names within the fan-related context of Jojo's Bizarre Adventure.
+For PERSON entities, the model achieved high precision (0.9744), but recall was lower at 0.6032, leading to an F1-score of 0.7451, indicating that while the model is accurate when identifying person names, it still misses a substantial portion of them. 
+The overall F1-score of 0.6715 reflects a reasonable balance.
