@@ -5959,7 +5959,7 @@ produced	O	O
 for	O	O
 members	O	O
 of	O	O
-Scientology	ORGANIZATION	O
+Scientology	0	O
 .	O	O
 YouTube	ORGANIZATION	ORGANIZATION
 removed	O	O
@@ -6009,8 +6009,8 @@ of	O	O
 14	O	O
 years	O	O
 ,	O	O
-Pat	O	PERSON
-Kingsley	O	PERSON
+Pat	PERSON	PERSON
+Kingsley	PERSON	PERSON
 ,	O	O
 resigned	O	O
 .	O	O
@@ -6129,7 +6129,7 @@ allege	O	O
 that	O	O
 the	O	O
 Scientology	ORGANIZATION	O
-organization	O	O
+organization	ORGANIZATION	O
 groomed	O	O
 romantic	O	O
 partners	O	O
@@ -6139,8 +6139,8 @@ and	O	O
 that	O	O
 Cruise	PERSON	PERSON
 used	O	O
-Sea	O	O
-Org	O	O
+Sea	ORGANIZATION	O
+Org	ORGANIZATION	O
 and	O	O
 Rehabilitation	ORGANIZATION	ORGANIZATION
 Project	ORGANIZATION	ORGANIZATION
@@ -6188,11 +6188,11 @@ Nazanin	PERSON	PERSON
 Boniadi	PERSON	PERSON
 later	O	O
 compared	O	O
-the	ORGANIZATION	O
-Scientology	ORGANIZATION	O
-organization	ORGANIZATION	O
-'s	ORGANIZATION	O
-auditioning	ORGANIZATION	O
+the	0	O
+Scientology	0	O
+organization	0	O
+'s	0	O
+auditioning	0	O
 of	O	O
 women	O	O
 to	O	O
@@ -6219,7 +6219,7 @@ Premiere	O	O
 ranked	O	O
 Cruise	PERSON	O
 as	O	O
-Hollywood	O	LOCATION
+Hollywood	LOCATION	LOCATION
 's	O	O
 most	O	O
 powerful	O	O
@@ -6315,7 +6315,7 @@ Day	O	O
 in	O	O
 Japan	LOCATION	LOCATION
 ;	O	O
-the	ORGANIZATION	O
+the	0	O
 Japan	ORGANIZATION	ORGANIZATION
 Memorial	ORGANIZATION	ORGANIZATION
 Day	ORGANIZATION	ORGANIZATION
@@ -6339,7 +6339,7 @@ and	O	O
 close	O	O
 association	O	O
 with	O	O
-Japan	O	LOCATION
+Japan	LOCATION	LOCATION
 .	O	O
 "	O	O
 While	O	O
@@ -6805,7 +6805,7 @@ Movies	O	O
 Tom	PERSON	PERSON
 Cruise	PERSON	PERSON
 on	O	O
-WorldCat	O	O
+WorldCat	ORGANIZATION	O
 (	O	O
 libraries	O	O
 )	O	O
