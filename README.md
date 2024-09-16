@@ -139,3 +139,30 @@ Or use the `eval.sh` script:
 ```bash
 ./eval.sh fanwiki-gold.txt fanwiki-eval.txt
 ```
+
+### **5. Fixing NER Tags for Punctuation and Re-evaluation**
+During the initial evaluation, it was observed that the model occasionally misclassified standalone punctuation marks as entities. To address this, we use the `fix-ner.py` script, which corrects these errors by tagging standalone punctuation correctly as 'O'.
+
+The script can be executed with:
+```bash
+python fix-ner.py
+```
+- This script will identify lines where punctuation marks (e.g., periods, commas, quotes) are tagged incorrectly as entities.
+- The corrected output files as `standard-wikipedia-training-corrected.txt` and `standard-fanwiki-training-corrected.txt`.
+
+**Re-evaluation Process:**
+1. Retrain the Model:
+  - Use the corrected training files to retrain the NER model. Update your training configurations (`wikipedia.prop` and `fanwiki.prop`).
+```bash
+java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop wikipedia.prop
+java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop fanwiki.prop
+```
+2. Re-evaluate the Model:
+```bash
+./eval.sh wikipedia-gold.txt wikipedia-eval.txt
+./eval.sh fanwiki-gold.txt fanwiki-eval.txt
+```
+
+### **6.Discussion**
+The detailed analysis of the model's performance on both Wikipedia and Fanwiki datasets provides insights into the strengths and weaknesses of the NER model. 
+For a full discussion of the evaluation results and the impact of corrections made by `fix-ner.py`, please refer to the [discussion.txt](./stanford-ner-2020-11-17/discussion.txt) file.
