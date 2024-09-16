@@ -169,7 +169,7 @@ The detailed analysis of the model's performance on both Wikipedia and Fanwiki d
 
 The evaluation results on the Wikipedia dataset using the `wikipedia-gold.txt` are shown below:
 
-![Evaluation of wikipedia before using fix-ner.py](./stanford-ner-2020-11-17/wikipedia_before_fix-ner.png)
+
 
 For a full discussion of the evaluation results and the impact of corrections made by `fix-ner.py`, please refer to the [discussion.txt](./stanford-ner-2020-11-17/discussion.txt) file.
 
