@@ -167,11 +167,17 @@ java -cp stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier -prop fanwiki.pr
 
 The detailed analysis of the model's performance on both Wikipedia and Fanwiki datasets provides insights into the strengths and weaknesses of the NER model.
 
-The evaluation results on the Wikipedia dataset using the `wikipedia-gold.txt` **without** using `fix-ner.py` are shown below:
+The evaluation results on the wikipedia dataset using the `wikipedia-gold.txt` **without** using `fix-ner.py` are shown below:
 ![Evaluation of wikipedia before using fix-ner.py](./stanford-ner-2020-11-17/wikipedia_before_fix-ner.png)
 
-The evaluation results on the Wikipedia dataset using the `wikipedia-gold.txt` **with** using `fix-ner.py` are shown below:
+The evaluation results on the wikipedia dataset using the `wikipedia-gold.txt` **with** using `fix-ner.py` are shown below:
 ![Evaluation of wikipedia before using fix-ner.py](./stanford-ner-2020-11-17/wikipedia_after_fix-ner.png)
+
+The evaluation results on the fanwiki dataset using the `fanwiki-gold.txt` **without** using `fix-ner.py` are shown below:
+![Evaluation of fanwiki before using fix-ner.py](./stanford-ner-2020-11-17/fanwiki_before_fix-ner.png)
+
+The evaluation results on the fanwiki dataset using the `fanwiki-gold.txt` **with** using `fix-ner.py` are shown below:
+![Evaluation of fanwiki after using fix-ner.py](./stanford-ner-2020-11-17/fanwiki_after_fix-ner.png)
 
 For a full discussion of the evaluation results and the impact of corrections made by `fix-ner.py`, please refer to the [discussion.txt](./stanford-ner-2020-11-17/discussion.txt) file.
 
