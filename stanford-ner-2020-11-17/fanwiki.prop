@@ -1,4 +1,4 @@
-trainFile = standard-fanwiki-training-corrected.txt
+trainFile = standard-fanwiki-training.txt
 serializeTo = ner-model.ser.gz
 map = word=0,answer=1
 
