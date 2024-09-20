@@ -39,7 +39,7 @@ def fix_ner_tags(file_path, output_path):
 
     print("Punctuation tags corrected and saved to", output_path)
 
-fix_ner_tags('standard-wikipedia-training.txt', 'standard-wikipedia-training-corrected.txt')
-fix_ner_tags('standard-fanwiki-training.txt', 'standard-fanwiki-training-corrected.txt')
+fix_ner_tags('stanford-wikipedia-training.txt', 'stanford-wikipedia-training-corrected.txt')
+fix_ner_tags('stanford-fanwiki-training.txt', 'stanford-fanwiki-training-corrected.txt')
 
 print("Punctuation tags corrected and saved to new files.")

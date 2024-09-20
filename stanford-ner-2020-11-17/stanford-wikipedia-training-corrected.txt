@@ -3707,7 +3707,7 @@ Paramount	ORGANIZATION
 's	O
 parent	O
 company	O
-)	ORGANIZATION
+)	O
 Sumner	ORGANIZATION
 Redstone	ORGANIZATION
 cited	O
@@ -4300,7 +4300,7 @@ children	O
 :	O
 Isabella	PERSON
 Jane	PERSON
-(	PERSON
+(	O
 born	O
 1992	O
 )	O
