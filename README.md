@@ -48,17 +48,17 @@ python extract-wikipedia.py
 python extract-fanwiki.py
 ```
 ### **2. Standardizing Data for NER**
-Once the data is extracted, it needs to be formatted to be suitable for NER training. This is done using the `standard-ner.py script`:
-  - `standard-ner.py`: This script takes the raw text files `wikipedia.txt` and `fanwiki.txt` and processes them to generate `standard-wikipedia.txt` and `standard-fanwiki.txt`. The output files are formatted in a way that aligns with the requirements of the Stanford NER training format.
+Once the data is extracted, it needs to be formatted to be suitable for NER training. This is done using the `stanford-ner.py script`:
+  - `stanford-ner.py`: This script takes the raw text files `wikipedia.txt` and `fanwiki.txt` and processes them to generate `stanford-wikipedia.txt` and `stanford-fanwiki.txt`. The output files are formatted in a way that aligns with the requirements of the Stanford NER training format.
     
 Run the script with:
 ```bash
-python standard-ner.py
+python stanford-ner.py
 ```
 
 ### **3. Listing Entities for NER Training**
 To prepare a structured list of entities for training the NER model, the `ner-listing.py` script is used:
-  - `ner-listing.py`: This script takes the standardized files `standard-wikipedia.txt` and `standard-fanwiki.txt` as input and outputs `ner-listing-wikipedia.txt` and `ner-listing-fanwiki.txt`. These files contain a list of all entities with their respective tags, which are essential for training and testing the NER model.
+  - `ner-listing.py`: This script takes the standardized files `stanford-wikipedia.txt` and `stanford-fanwiki.txt` as input and outputs `ner-listing-wikipedia.txt` and `ner-listing-fanwiki.txt`. These files contain a list of all entities with their respective tags, which are essential for training and testing the NER model.
 
 Execute this script with:
 ```bash
@@ -66,13 +66,13 @@ python ner-listing.py
 ```
 ### **4. Creating Gold Standard Files**
 The final step in data preparation involves creating gold standard files for testing the NER model:
-  - `wikipedia-gold.txt` and `fanwiki-gold.txt`: These files are derived from `standard-wikipedia.txt` and `standard-fanwiki.txt` but include manual corrections to entity tags to ensure they make the most sense for the context of each dataset.
+  - `wikipedia-gold.txt` and `fanwiki-gold.txt`: These files are derived from `stanford-wikipedia.txt` and `stanford-fanwiki.txt` but include manual corrections to entity tags to ensure they make the most sense for the context of each dataset.
 ---
 
 ## **Model Training**
 
 ### **1. Preparing Training Data**
-The training data for the NER model is prepared from the standardized text files `standard-wikipedia.txt` and `standard-fanwiki.txt`. These files are processed to create `standard-wikipedia-training.txt` and `standard-fanwiki-training.txt`, which are formatted specifically for use with the Stanford NER framework.
+The training data for the NER model is prepared from the standardized text files `stanford-wikipedia.txt` and `stanford-fanwiki.txt`. These files are processed to create `stanford-wikipedia-training.txt` and `stanford-fanwiki-training.txt`, which are formatted specifically for use with the Stanford NER framework.
   - Each line in the training files follows the format:
 ```bash
 word<TAB>ENTITY
@@ -90,7 +90,7 @@ This format ensures that the data aligns with the expected input format specifie
 To train the NER model, you need to create or adjust the property files (`wikipedia.prop` and `fanwiki.prop`) that define the training parameters and paths to your training data. Below is an example configuration:
 ```bash
 # Example configuration for wikipedia.prop or fanwiki.prop
-trainFile = /path/to/standard-wikipedia-training.txt  # Use the correct path to training file
+trainFile = /path/to/stanford-wikipedia-training.txt  # Use the correct path to training file
 serializeTo = /path/to/ner-model.ser.gz
 map = word=0,answer=1
 useClassFeature = true
@@ -148,7 +148,7 @@ The script can be executed with:
 python fix-ner.py
 ```
 - This script will identify lines where punctuation marks (e.g., periods, commas, quotes) are tagged incorrectly as entities.
-- The corrected output files as `standard-wikipedia-training-corrected.txt` and `standard-fanwiki-training-corrected.txt`.
+- The corrected output files as `stanford-wikipedia-training-corrected.txt` and `stanford-fanwiki-training-corrected.txt`.
 
 **Re-evaluation Process:**
 1. Retrain the Model:
